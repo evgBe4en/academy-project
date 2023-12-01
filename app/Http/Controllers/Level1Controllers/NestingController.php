@@ -1,16 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Level1Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class TestController extends Controller
+class NestingController extends Controller
 {
-    public function getUser($lastName, $firstName)
-    {
-        return response()->json([$firstName, $lastName], '200');
-    }
-
     public function getNestedData($i)
     {
         $nestedData = $this->createNestedData($i);
@@ -27,6 +22,5 @@ class TestController extends Controller
             'level_' . $level => $this->createNestedData($level - 1)
         ];
     }
-
 
 }

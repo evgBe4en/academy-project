@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\Level1Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user/{last_name}/{first_name}/', [TestController::class, 'getUser']);
+Route::get('/user/{last_name}/{first_name}/', [UserController::class, 'getUser']);
