@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Level1Controllers\FibonacciController;
 use App\Http\Controllers\Level1Controllers\NestingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,4 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/nesting/{i}', [NestingController::class, 'getNestedData']);
+Route::get('/fibonacci/{index}', [FibonacciController::class, 'getFibonacciNumber']);
 
