@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Level1Controllers\ApplesController;
 use App\Http\Controllers\Level1Controllers\FibonacciController;
 use App\Http\Controllers\Level1Controllers\NestingController;
 use Illuminate\Http\Request;
@@ -22,4 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/nesting/{i}', [NestingController::class, 'getNestedData']);
 Route::get('/fibonacci/{index}', [FibonacciController::class, 'getFibonacciNumber']);
+Route::get('/apples/{pattern}/{index}', [ApplesController::class, 'getAppleColor']);
 
